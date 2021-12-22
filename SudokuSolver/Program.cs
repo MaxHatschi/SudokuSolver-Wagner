@@ -20,7 +20,11 @@ namespace SudokuSolver {
       SudokuBoard board = new SudokuBoard(initialBoard);
 
       bool solved = SudokuSolver.Solve(board);
+
+      Console.WriteLine(board.ToString());
+
       Console.Write("This Sudoku is ... ");
+
       Console.WriteLine($"{(solved ? "SOLVED" : "UNSOLVABLE")}");
     }
   }

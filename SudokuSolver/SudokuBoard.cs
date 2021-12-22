@@ -103,5 +103,31 @@ namespace SudokuSolver {
       }
       return status;
     }
+
+    public override string ToString()
+    {
+      string View = "";
+
+      for (int i=0; i < size; i++)
+      {
+        for (int j=0; j < size; j++)
+        {
+          View += " " + board[i, j] + " |";
+          if (j==2 || j==5)
+          {
+            View += "|";
+          }
+        }
+        View += "\n - - - - - - - - - - - - - - - - - - - \n";
+        if (i == 2 || i == 5)
+        {
+          View += " - - - - - - - - - - - - - - - - - - - \n";
+        }
+      }
+
+      return View;
+
+       
+    }
   }
 }
